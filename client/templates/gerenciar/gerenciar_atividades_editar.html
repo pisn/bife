@@ -1,0 +1,96 @@
+<template name="gerenciarAtividadesEditar">
+
+    <div class="navbar-fixed" id="feed-header">
+        <nav id="header">
+            <div class="nav-wrapper">
+                <ul class="left">
+                    <li>
+                        <a href="{{pathFor 'gerenciar_atividades'}}" data-activates="mobile-demo" class="button-collapse"><i class="mdi-hardware-keyboard-backspace"></i></a>
+                    </li>
+                    <li>Editar Atividade</li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <form action="">
+    <div class="container">
+
+        <div class="row">
+            <br>
+            <div class="input-field col s12">
+                <input id="atividade_titulo" type="text" class="validate" value="{{titulo}}">
+                <label for="atividade_titulo">Título da atividade</label>
+            </div>
+
+            <div class="input-field col s12">
+                <textarea id="atividade_descricao" class="materialize-textarea" value="{{descricao}}"></textarea>
+                <label for="atividade_descricao">Descricao da atividade</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input id="atividade_imagem" type="text" class="validate" value="{{imagem}}">
+                <label for="atividade_imagem">Imagem da atividade</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input id="atividade_local" type="text" class="validate" value="{{local}}">
+                <label for="atividade_local">Local</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input id="atividade_tipo" type="text" class="validate" value="{{tipo}}">
+                <label for="atividade_tipo">Tipo</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input id="atividade_datainicio" type="text" class="validate" value="{{datainicio}}">
+                <label for="atividade_datainicio">Data de Início</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input id="atividade_horarioinicio" type="text" class="validate" value="{{horarioinicio}}">
+                <label for="atividade_horarioinicio">Horário Início</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input type="text" id="atividade_duracao" name="atividade_duracao" value="{{duracao}}" placeholder="utilize o formato 00:00">
+                <label for="atividade_duracao">Duração da Atividade</label>
+            </div>
+
+            <!-- adicioniar auto-complete aqui -->
+            <div class="input-field col s12">
+                <input id="atividade_linhas" type="text" class="validate" value="{{linhas}}">
+                <label for="atividade_linhas">Linhas da atividade</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input type="text" id="atividade_participantes" name="atividade_participantes" value="{{participantes}}">
+                <label for="atividade_participantes">Número de Participantes</label>
+            </div>
+       </div>
+
+        <h4>Ministrante</h4>
+
+       <div class="row">
+
+            <div class="input-field col s12">
+                <input id="atividade_ministrante_titulo" type="text" value="{{nomeministrante}}" class="validate">
+                <label for="atividade_ministrante_titulo">Nome do Ministrante</label>
+            </div>
+
+            <div class="input-field col s12">
+                <textarea id="atividade_ministrante_descricao" value="{{descricaoministrante}}" class="materialize-textarea"></textarea>
+                <label for="atividade_ministrante_descricao">Descrição do Ministrante</label>
+            </div>
+
+       </div>
+
+       <input type="submit" class="btn waves-effect waves-light adicionar_atividade" value="Editar atividade" style="margin: 0 auto;">
+
+    </div>
+    </form>
+
+</template>
+
+
+

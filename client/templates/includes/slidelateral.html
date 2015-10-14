@@ -1,0 +1,31 @@
+<template name="slideLateral">
+    <ul class="side-nav" id="mobile-demo">
+        <figure></figure>
+        <li class="clearfix"></li>
+        {{#if currentUser}}
+            <li><a href="{{pathFor 'meun'}}"><i class="mdi-notification-event-available"></i> Meu N SP</a></li>
+        {{/if}}
+        <li><a href="{{pathFor 'atividades'}}"><i class="mdi-notification-event-note"></i> Atividades</a></li>
+        <li><a href="{{pathFor 'tags'}}"><i class="mdi-action-list"></i>Lista de Linhas</a></li>
+
+        <hr>
+
+        <li><a href="{{pathFor 'mapa'}}">Mapa da Rio Branco</a></li>        
+        <!--<li><a href="{{pathFor 'estatica'}}">Informações úteis</a></li>-->
+        <li><a href="{{pathFor 'sobreon'}}">Sobre o N</a></li>
+        {{#if currentUser}}
+            <li><a href="{{pathFor 'configuracoes'}}">Configurar Notificações</a></li>
+        {{/if}}
+        <hr>
+        {{#if currentUser.profile.isAdmin}}
+            <li><a href="{{pathFor 'gerenciar_atividades'}}">Gerenciar Atividades</a></li>
+            <li><a href="{{pathFor 'gerenciar_notificacao'}}">Gerenciar Notificações</a></li>
+        {{/if}}
+
+        {{#if currentUser}}
+            <li><a href="" class="logout">Logout</a></li>
+        {{else}}
+            <li><a href="{{pathFor 'login'}}">Login</a></li>
+        {{/if}}
+    </ul>
+</template>

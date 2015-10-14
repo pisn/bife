@@ -1,0 +1,24 @@
+<template name="porqueLogar">
+    <div class="col s12">
+        <div class="container">
+
+            <h2 style="color: white; margin-top: 50px;">Pense bem...</h2>
+            <p style="color: white; font-size: 15px;">As vantagens de fazer login são:</p>
+
+            <ol style="color: white; line-height: 2; padding-left: 15px; font-size: 15px;">
+                <li>É possível salvar as atividades nas quais deseja ir e montar sua própria programação</li>
+                <li>Receber notificações push quando as suas atividades marcadas estiverem próximas</li>
+                <li>Receber os avisos da CONDe através de notificações push</li>
+            </ol>
+
+            <div class="row center" style="margin-top: 30px;">
+                <a href="{{pathFor "registrar"}}" class="login_button btn waves-effect waves-light" type="submit" name="action" style="margin: 0 auto;">Voltar para o registro</a>
+                <p><a href="{{pathFor 'atividades'}}" style="color: white; margin-top: 30px;">Continuar sem login</a></p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</template>

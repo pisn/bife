@@ -1,0 +1,30 @@
+<template name="registrar">
+	<div class="col s12 login_screen">
+		<div class="container">
+            <div class="row row-logo">
+                <img src="logo.svg" alt="">
+            </div>
+			<div class="row">
+				<div class="input-field col s12 white-text">
+	                <input id="login_email" type="email" class="validate white-text">
+	                <label for="login_email" class="white-text">E-mail</label>
+	            </div>
+
+	            <div class="input-field col s12 white-text">
+	                <input id="login_senha" type="password" class="validate white-text">
+	                <label for="login_senha" class="white-text">Senha</label>
+	            </div>
+
+                <div class="input-field col s12 white-text">
+	                <input id="login_confirmar_senha" type="password" class="validate white-text">
+	                <label for="login_confirmar_senha" class="white-text">Confirmar Senha</label>
+	            </div>
+			</div>
+			<div class="row center">
+				<a class="register_button btn waves-effect waves-light" type="submit" name="action" style="margin: 0 auto;">Registrar</a>
+				<br><br>
+				<a href="{{pathFor 'login'}}" class="white-text">Já é registrado? Faça o login</a><br><br><a href="{{pathFor 'atividades'}}"><span class="white-text">Ou então vá direto para Atividades</span></a>
+			</div>
+		</div>
+	</div>
+</template>

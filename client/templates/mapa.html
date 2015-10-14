@@ -1,0 +1,34 @@
+<template name="mapa">
+	{{> header}}
+	<img id="mapa" src="mapa/mapa_completo.png" />
+	<ul class="collapsible" data-collapsible="accordion">
+		<li>
+			<div class="collapsible-header" id="completo">O que você está procurando?</div>
+			<div class="collapsible-body">
+				<ul class="collapsible" id="mapa_list" data-collapsible="accordion">
+					<li>
+						<div class="collapsible-header" id="rosa"><span></span>Palestras, MRs, Coficinas</div>
+					</li>
+					<li>
+						<div class="collapsible-header" id="ciano"><span></span>Oficinas, SePA, SePP, ZAF</div>
+					</li>
+					<li>
+						<div class="collapsible-header" id="amarelo"><span></span>Espaços de convivência</div>
+					</li>
+					<li>
+						<div class="collapsible-header" id="alimentacao"><span></span>Praça de alimentação</div>
+					</li>
+					<li>
+						<div class="collapsible-header" id="ambulatorio"><span></span>Ambulatório</div>
+					</li>
+					<li>
+						<div class="collapsible-header" id="elevadores"><span></span>Elevadores</div>
+					</li>
+					<li>
+						<div class="collapsible-header" id="banheiros"><span></span>Banheiros</div>
+					</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</template>

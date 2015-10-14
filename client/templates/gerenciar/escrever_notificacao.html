@@ -1,0 +1,47 @@
+<template name="escreverNotificacao">
+    
+    <div class="navbar-fixed" id="feed-header">
+		<nav id="header">
+			<div class="nav-wrapper">
+				<ul class="left">
+					<li>
+                        <a href="{{pathFor 'gerenciar_notificacao'}}" data-activates="mobile-demo" class="button-collapse"><i class="mdi-hardware-keyboard-backspace"></i></a>
+                    </li>
+					<li>Escrever Notificação</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+    <form action="">
+    <div class="container">
+
+        <div class="row">
+            <br>
+            <div class="input-field col s12">
+                <input id="notificacao_titulo" type="text" class="validate">
+                <label for="notificacao_titulo">Título da Notificação</label>
+            </div>
+
+            <div class="input-field col s12">
+                <textarea id="notificacao_mensagem" class="materialize-textarea"></textarea>
+                <label for="notificacao_mensagem">Mensagem na Notificação</label>
+            </div>
+
+            <div class="input-field col s12">
+                <select id="notificacao_referencia">
+                    <option value="" disabled selected>Refere-se a alguma atividade?</option>
+                    <option value="0">Nenhuma</option>
+                    {{#each listAtividades}}
+                    <option value="{{_id}}">{{titulo}}</option>
+                    {{/each}}
+                </select>
+            </div>
+       </div>
+
+       <input type="submit" class="btn waves-effect waves-light adicionar_notificacao" value="Adicionar Notificação" style="margin: 0 auto;">
+
+    </div>
+    </form>
+    
+</template>
+

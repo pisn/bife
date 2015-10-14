@@ -1,0 +1,18 @@
+<template name="atividadesTag">
+	{{>header}}
+
+	<div class="navbar-fixed" style="z-index: 1">
+	  <nav id="tags-header">
+	    <div class="nav-wrapper">
+	      <ul id="nav-mobile" class="left" style="min-width: 100%;">
+	        <li id="tag" style="min-width: 100%;"><strong>{{tagSearched}}</strong></li>
+	      </ul>
+	    </div>
+	  </nav>
+	</div>
+
+
+    <ul class="collection" id="atividades">
+  	    {{atividades_list}}
+    </ul>
+</template>

@@ -1,0 +1,22 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+materialize:materialize
+accounts-password
+underscore
+sacha:spin
+iron:router
+meteorhacks:kadira
+cfs:standard-packages
+cfs:filesystem
+tomi:upload-jquery
+raix:push
+momentjs:moment
+ground:db
+appcache
+percolate:synced-cron
+mrt:jquery-ui

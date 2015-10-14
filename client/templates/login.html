@@ -1,0 +1,30 @@
+<template name="login">
+	<div class="col s12 login_screen">
+		<div class="container">
+            <div class="row row-logo">
+                <img src="logo.svg" alt="">
+            </div>
+			<div class="row">
+				<div class="input-field col s12 white-text">
+	                <input id="login_email" type="email" class="validate white-text">
+	                <label for="login_email" class="white-text">E-mail</label>
+	            </div>
+
+	            <div class="input-field col s12 white-text">
+	                <input id="login_senha" type="password" class="validate white-text">
+	                <label for="login_senha" class="white-text">Senha</label>
+	            </div>
+			</div>
+			<div class="row center">
+				<a class="login_button btn waves-effect waves-light" type="submit" name="action" style="margin: 0 auto;">Login</a>
+				<br><br>
+				<a href="{{pathFor 'registrar'}}" class="white-text">Não tem cadastro? Registre-se!</a>
+                <br><br>
+                <a href="{{pathFor 'porquelogar'}}" class="white-text">Pular, e ir direto para atividades!</a>
+			</div>
+		</div>
+        <div class="bg-container"></div>
+	</div>
+</template>
+
+

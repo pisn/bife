@@ -1,0 +1,229 @@
+<template name="gerenciarAtividadesAdicionar">
+    
+    <div class="navbar-fixed" id="feed-header">
+		<nav id="header">
+			<div class="nav-wrapper">
+				<ul class="left">
+					<li>
+                        <a href="{{pathFor 'gerenciar_atividades'}}" data-activates="mobile-demo" class="button-collapse"><i class="mdi-hardware-keyboard-backspace"></i></a>
+                    </li>
+					<li>Adicionar Atividade</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+    <form action="">
+    <div class="container">
+
+        <div class="row">
+            <br>
+            <div class="input-field col s12">
+                <input id="atividade_titulo" type="text" class="validate">
+                <label for="atividade_titulo">Título da atividade</label>
+            </div>
+
+            <div class="input-field col s12">
+                <textarea id="atividade_descricao" class="materialize-textarea"></textarea>
+                <label for="atividade_descricao">Descricao da atividade</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input id="atividade_imagem" type="text" class="validate">
+                <label for="atividade_imagem">Imagem da atividade</label>
+            </div>
+
+            <div class="input-field col s12">
+                <select id="atividade_local">
+                    <option value="" disabled selected>Selecione um local</option>
+                    <option value="Auditório">Auditório</option>
+                    <option value="E 09">E 09</option>
+                    <option value="E 17">E 17</option>
+                    <option value="Q 13">Q 13</option>
+                    <option value="Q 09">Q 09</option>
+                    <option value="Q 07">Q 07</option>
+                    <option value="Q 03">Q 03</option>
+                    <option value="R 03">R 03</option>
+                    <option value="S 01">S 01</option>
+                    <option value="S 07">S 07</option>
+                    <option value="T 01">T 01</option>
+                    <option value="T 13">T 13</option>
+                    <option value="U 02">U 02</option>
+                    <option value="U 03">U 03</option>
+                    <option value="U 05">U 05</option>
+                    <option value="U 07">U 07</option>
+                    <option value="U 14">U 14</option>
+                    <option value="U 12">U 12</option>
+                    <option value="V 03">V 03</option>
+                    <option value="X 01">X 01</option>
+                    <option value="Z 02">Z 02</option>
+                    <option value="Z 03">Z 03</option>
+                    <option value="Z 04">Z 04</option>
+                    <option value="Z 05">Z 05</option>
+                    <option value="Z 07">Z 07</option>
+                    <option value="Z 09">Z 09</option>
+                    <option value="Z 11">Z 11</option>
+                    <option value="Z 13">Z 13</option>
+                    <option value="Z 17">Z 17</option>
+                    <option value="Z 19">Z 19</option>
+                    <option value="Z 23">Z 23</option>
+                    <option value="LAB 04">LAB 04</option>
+                    <option value="LAB 05">LAB 05</option>
+                    <option value="LAB 07">LAB 07</option>
+                    <option value="LAB 08">LAB 08</option>
+                </select>
+                <label>Local</label>
+            </div>
+
+            <div class="input-field col s12">
+                <select id="atividade_tipo">
+                    <option value="" disabled selected>Selecione um tipo</option>
+                    <option value="Atividade da CoNE">Atividade da CoNE</option>
+                    <option value="Coficinas">Coficinas</option>
+                    <option value="Curta">Curta</option>
+                    <option value="De Dentro pra Fora">De Dentro pra Fora</option>
+                    <option value="De Fora pra Dentro">De Fora pra Dentro</option>
+                    <option value="Desfile">Desfile</option>
+                    <option value="Festa">Festa</option>
+                    <option value="Filmes">Filmes</option>                    
+                    <option value="Mesas Redondas e Debates">Mesas Redondas e Debates</option>
+                    <option value="Oficina">Oficina</option>
+                    <option value="Palestra">Palestra</option>
+                    <option value="Plenária">Plenária</option>
+                    <option value="SePA/SePP">SePA/SePP</option>
+                    <option value="Roda de Leitura">Roda de Leitura</option>
+                    <option value="Visitas">Visitas</option>
+                </select>
+                <label>Tipo</label>
+            </div>
+
+            <div class="input-field col s12">
+                <select id="atividade_datainicio">
+                    <option value="" disabled selected>Selecione uma data</option>
+                    <option value="19">19/07</option>
+                    <option value="20">20/07</option>
+                    <option value="21">21/07</option>
+                    <option value="22">22/07</option>
+                    <option value="23">23/07</option>
+                    <option value="24">24/07</option>
+                    <option value="25">25/07</option>
+                    <option value="26">26/07</option>
+                </select>
+                <label>Data de Início</label>
+            </div>
+            
+            <div class="input-field col s12">
+                <select id="atividade_horarioinicio">
+                    <option value="" disabled selected>Selecione uma data</option>
+                    <option value="08:00">08:00</option>
+                    <option value="08:30">08:30</option>
+                    <option value="09:00">09:00</option>
+                    <option value="09:30">09:30</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:30">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30">21:30</option>
+                    <option value="22:00">22:00</option>
+                    <option value="22:30">22:30</option>
+                    <option value="23:00">23:00</option>
+                    <option value="23:30">23:30</option>
+                    <option value="00:00">00:00</option>
+                    <option value="00:30">00:30</option>
+                    <option value="01:00">01:00</option>
+                    <option value="01:30">01:30</option>
+                    <option value="02:00">02:00</option>
+                    <option value="02:30">02:30</option>
+                    <option value="03:00">03:00</option>
+                    <option value="03:30">03:30</option>
+                    <option value="04:00">04:00</option>
+                    <option value="04:30">04:30</option>
+                    <option value="05:00">05:00</option>
+                    <option value="05:30">05:30</option>
+                    <option value="06:00">06:00</option>
+                    <option value="06:30">06:30</option>
+                    <option value="07:00">07:00</option>
+                    <option value="07:30">07:30</option>
+                </select>
+                <label for="atividade_horarioinicio">Horário Início</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input type="text" id="atividade_duracao" name="atividade_duracao" placeholder="utilize o formato 00:00"> 
+                <label for="atividade_duracao">Duração da Atividade</label>
+            </div>
+
+            <!-- adicioniar auto-complete aqui -->
+            <div class="input-field col s12">
+                <select id="atividade_linhas">
+                    <option value="" disabled selected>Selecione uma data</option>
+                    <option value="Faça você mesmo">Faça você mesmo</option>
+                    <option value="Design e Sinestesia">Design e Sinestesia</option>
+                    <option value="Construcao de Carreira e Empreendedorismo">Construção de Carreira e Empreendedorismo</option>
+                    <option value="Producao Vernacular">Produção Vernacular</option>
+                    <option value="Design Thinking">Design Thinking</option>
+                    <option value="Design e Educação ">Design e Educação</option>
+                    <option value="Economia Solidária">Economia Solidária</option>
+                    <option value="Ética do Design">Ética do Design</option>
+                    <option value="Espaço Público">Espaço Público</option>
+                    <option value="Identidade Cultural">Identidade Cultural</option>
+                    <option value="Métodos de Projeto">Métodos de Projeto</option>
+                    <option value="Organizações Inovadoras">Organizações Inovadoras</option>
+                    <option value="Pimp My N">Pimp My N</option>
+                    <option value="Sustentabilidade">Sustentabilidade</option>
+                    <option value="Design e Diversidade">Design e Diversidade</option>
+                    <option value="Design para Todos">Design para Todos</option>
+                    <option value="Design e Poder Público">Design e Poder Público</option>
+                    <option value="Design, História e Contemporaneidade">Design, História e Contemporaneidade</option>
+                    <option value="Filosofia do Design">Filosofia do Design</option>
+                </select>
+                <label for="atividade_linhas">Linhas da atividade</label>
+            </div>
+
+            <div class="input-field col s12">
+                <input type="text" id="atividade_participantes" name="atividade_participantes"> 
+                <label for="atividade_participantes">Número de Participantes</label>
+            </div>
+       </div>
+
+        <h4>Ministrante</h4>
+
+       <div class="row">
+
+            <div class="input-field col s12">
+                <input id="atividade_ministrante_titulo" type="text" class="validate">
+                <label for="atividade_ministrante_titulo">Nome do Ministrante</label>
+            </div>
+
+            <div class="input-field col s12">
+                <textarea id="atividade_ministrante_descricao" class="materialize-textarea"></textarea>
+                <label for="atividade_ministrante_descricao">Descrição do Ministrante</label>
+            </div>
+
+       </div>
+
+       <input type="submit" class="btn waves-effect waves-light adicionar_atividade" value="Adicionar atividade" style="margin: 0 auto;">
+
+    </div>
+    </form>
+    
+</template>
+

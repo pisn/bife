@@ -1,0 +1,17 @@
+{
+  "apn": {
+    "passphrase": "",
+    "key": "",
+    "cert": "",
+    "gateway": ""
+  },
+  "gcm": {
+    "apiKey": "",
+    "projectNumber": 
+  },
+  "production": true,
+  "badge": true,
+  "sound": true,
+  "alert": true,
+  "vibrate": true
+}

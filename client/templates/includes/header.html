@@ -1,0 +1,40 @@
+<template name="header">
+
+	<div class="navbar-fixed" id="feed-header">
+		<nav id="header">
+			<div class="nav-wrapper">
+				<ul class="left" style="width: calc(100% - 140px);">
+					<li>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                    </li>
+					<li style="width: calc(100% - 70px); text-align: center;">{{page_title}}</li>
+				</ul>
+				<ul class="right">
+					{{#if currentUser}}
+					    <li>
+					    	<a href="{{pathFor 'notificacoes'}}">
+					    		<i class="mdi-social-notifications"></i>
+					    		{{#if anyUnreadNotifications}}
+					    			<span id="notifications_badge">{{anyUnreadNotifications}}</span>
+					    		{{/if}}
+					    	</a>
+					    </li>
+				    {{/if}}
+				    {{#if searchForm}}
+				    	<!--<li><a><i class="mdi-action-search"></i></a></li>-->
+				    {{/if}}
+				</ul>
+				{{> slideLateral}}
+			</div>
+		</nav>
+	</div>
+	<div class="row">
+		<div class="input-field col s12">
+			<form id="search-form">
+				<input id="search" type="text" class="validate">
+				<label for="search">Pesquisar</label>
+			</form>
+		</div>
+	</div>
+
+</template>

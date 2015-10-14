@@ -1,0 +1,33 @@
+<template name="gerenciarAtividades">
+    {{> header}}
+    
+    {{> atividades_nav}}
+    
+    <br>
+    
+    <div class="valign-wrapper center-align">
+        <a href="{{pathFor 'gerenciar_atividades_adicionar'}}" class="btn waves-effect waves-light" type="submit" name="action" style="margin: 0 auto;">Adicionar nova atividade</a>
+    </div>
+    
+    <br>
+    
+    <ul class="collection" id="atividades">
+        {{#each allActivities}}
+            {{> gerenciarAtividadesItem}}
+        {{/each}}
+    </ul>
+</template>
+
+
+<template name="gerenciarAtividadesItem">
+	<li class="collection-item avatar">
+        <a href="/atividade_editar/{{_id}}"  class="atividades-list-link"></a>
+        <img src="/atividades/atividade/{{imagem}}.jpg" alt="" class="circle">
+        <span class="title">{{titulo}}</span>
+        <p><strong>{{nomeministrante}}</strong></p>
+        <p>{{local}} {{horarioinicio}} - {{horariotermino}}</p>
+        <p>{{tipo}} - {{linhas}}</p>
+        <a href="#!" class="secondary-content"><i class="mdi-notification-event-note"></i></a>
+        <a href="#!" class="secondary-content"><i class="mdi-notification-event-note"></i></a>
+    </li>
+</template>

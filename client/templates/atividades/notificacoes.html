@@ -1,0 +1,26 @@
+<template name="notificacoes">
+	{{> header}}
+
+    {{#if naoReceber}}
+        <div class="container center">
+            <p><br><br>Suas notificações estão desabilitadas.<br><br><br></p>
+            <a href="{{pathFor 'configuracoes'}}" class="btn waves-effect waves-light" style="margin: 0 auto;">Habilitar Notificações</a>
+        </div>
+    {{else}}
+
+        <ul class="collection" id="notificacoes">
+            {{#each listarNotificacoes}}
+                {{> notificacao_front}}
+            {{/each}}
+        </ul>
+
+    {{/if}}
+</template>
+
+
+<template name="notificacao_front">
+    <li class="collection-item avatar notification {{readUnread}}">
+        <p>{{titulo}} - {{formatDate submitted}}</p>
+		<span class="title">{{mensagem}}</span>
+    </li>
+</template>

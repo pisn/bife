@@ -1,0 +1,38 @@
+<template name="atividadeSingle">
+
+	<div class="section no-pad-bot atividade_single cyan" id="index-banner">
+		<a href="{{pathFor 'atividades'}}" class="close_link"><i class="medium mdi-navigation-close white-text"></i></a>
+		<img src="/atividades/atividade/{{imagem}}.jpg" alt="">
+        <div class="container header">
+        	<h4 class="white-text">{{titulo}}</h4>
+        	{{#if currentUser}}
+        	<a class="btn-floating btn-large right waves-effect waves-light {{isGoing}} accent-2 add_meun" data-atividade="{{_id}}"><i class="mdi-action-event cyan-text darken-4"></i></a>
+        	{{/if}}
+        </div>
+    </div>
+    <div class="container">
+    	<div class="row">
+	    	<div class="col s12 atividade_metadata">
+		    	<p><i class="mdi-maps-place gray-text lighten-1"></i> <a href="{{pathFor 'mapa'}}">{{local}}</a></p>
+		    	<p><i class="mdi-device-access-time gray-text lighten-1"></i> <a href="">{{horarioinicio}} - Duração: {{duracao}}</a></p>
+		    	<p><i class="mdi-editor-insert-comment gray-text lighten-1"></i> <a href="">{{tipo}}</a></p>
+		    	<p><i class="mdi-social-group gray-text lighten-1"></i> <a href="">Participantes: {{participantes}}</a></p>
+                <p><i class="mdi-action-label gray-text lighten-1"></i> <a href="{{pathFor 'listaTags'}}">{{linhas}}</a></p>
+	    	</div>
+	    </div>
+	</div>
+    <hr style="margin: 0;">
+	<div class="container">
+		<div class="row" style="margin-bottom: 0;">
+	    	<div class="col s12">
+		    	<h6>Descrição</h6>
+		    	<p>{{descricao}}</p>
+			</div>
+			<div class="col s12">
+	    		<h6>Ministrantes</h6>
+				<span class="title">{{nomeministrante}}</span>
+				<p>{{descricaoministrante}}</p>
+			</div>
+		</div>
+    </div>
+</template>
