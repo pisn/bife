@@ -16,17 +16,11 @@ Template.gerenciarAtividadesEditar.events({
         //save static book information
         var atividade = {
             titulo: $(e.target).find('#atividade_titulo').val(),
-            descricao: $(e.target).find('#atividade_descricao').val(),
             imagem: $(e.target).find('#atividade_imagem').val(),
             local: $(e.target).find('#atividade_local').val(),
             tipo: $(e.target).find('#atividade_tipo').val(),
             datainicio: $(e.target).find('#atividade_datainicio').val(),
-            horarioinicio: $(e.target).find('#atividade_horarioinicio').val(),
-            duracao: $(e.target).find('#atividade_duracao').val(),
-            participantes: $(e.target).find('#atividade_participantes').val(),
-            linhas: $(e.target).find('#atividade_linhas').val(),
-            nomeministrante: $(e.target).find('#atividade_ministrante_titulo').val(),
-            descricaoministrante: $(e.target).find('#atividade_ministrante_descricao').val()
+            horarioinicio: $(e.target).find('#atividade_horarioinicio').val()
         }
 
         Meteor.call('atividadesUpdate', atividade, activityId, function(error, result) {
