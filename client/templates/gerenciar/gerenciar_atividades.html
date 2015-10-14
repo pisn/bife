@@ -20,13 +20,14 @@
 
 
 <template name="gerenciarAtividadesItem">
+    <p class='horario'> {{horarioinicio}} </p>
 	<li class="collection-item avatar">
         <a href="/atividade_editar/{{_id}}"  class="atividades-list-link"></a>
         <img src="/atividades/atividade/{{imagem}}.jpg" alt="" class="circle">
         <span class="title">{{titulo}}</span>
         <p><strong>{{nomeministrante}}</strong></p>
-        <p>{{local}} {{horarioinicio}} - {{horariotermino}}</p>
-        <p>{{tipo}} - {{linhas}}</p>
+        <p>{{local}} {{horarioinicio}}</p>
+        <p>{{tipo}}</p>
         <a href="#!" class="secondary-content"><i class="mdi-notification-event-note"></i></a>
         <a href="#!" class="secondary-content"><i class="mdi-notification-event-note"></i></a>
     </li>

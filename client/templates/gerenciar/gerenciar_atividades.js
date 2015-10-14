@@ -1,5 +1,11 @@
 Template.gerenciarAtividades.helpers ({
-	'atividades_list': function () {
-		Meteor.myfunctions.renderGerenciarAtividades();
+	'allActivities': function () {
+		var atividadesDiaSelecionado = Session.get("day");
+        var atividadesTotal = Atividades.find({
+        	'datainicio': atividadesDiaSelecionado
+        }, {sort: {horarioinicio: 1}}).fetch();
+
+
+        return atividadesTotal;
 	}
 });
