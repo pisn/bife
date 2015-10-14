@@ -7,24 +7,15 @@ Template.meun.helpers({
 Template.meun.onRendered(function () {
     if (!Session.get('fromAtividade') || Session.get('fromAtividade') == 0) {
 	    var today = new Date ();
-		var dd = today.getDay();
-		if (dd <= 19) {
-	    	Session.set("day", "19");
-	    } else if (dd == 20) {
-			Session.set("day", "20");
-	    } else if (dd == 21) {
-			Session.set("day", "21");
-	    } else if (dd == 22) {
-			Session.set("day", "22");
-	    } else if (dd == 23) {
-			Session.set("day", "23");
-	    } else if (dd == 24) {
-			Session.set("day", "24");
-	    } else if (dd == 25) {
-			Session.set("day", "25");
-	    } else if (dd >= 26) {
-			Session.set("day", "16");
-	    }
+		var dd = today.getDate();
+		var mm = today.getMonth();
+		if (mm <=9) {
+	    	Session.set("day", "31/10");
+	  } else if (dd == 1) {
+			Session.set("day", "01/11");
+	  } else if (dd == 2) {
+			Session.set("day", "02/11");
+	  } 
 	} else {
 		Session.set("day", Session.get('fromAtividade'));
 	}

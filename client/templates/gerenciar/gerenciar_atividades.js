@@ -1,5 +1,5 @@
 Template.gerenciarAtividades.helpers ({
-	'allActivities': function () {
-		return Atividades.find();
+	'atividades_list': function () {
+		Meteor.myfunctions.renderGerenciarAtividades();
 	}
 });
