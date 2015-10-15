@@ -1,19 +1,19 @@
-Template.meun.helpers({
+Template.meubife.helpers({
     atividades_list: function () {
-    	Meteor.myFunctions.renderMeuN();
+    	Meteor.myFunctions.renderMeuBife();
     }
 });
 
-Template.meun.onRendered(function () {
+Template.meubife.onCreated(function () {
     if (!Session.get('fromAtividade') || Session.get('fromAtividade') == 0) {
 	    var today = new Date ();
 		var dd = today.getDate();
 		var mm = today.getMonth();
-		if (mm <=9) {
+		if (mm <=10) {
 	    	Session.set("day", "31/10");
-	  } else if (dd == 1) {
+	  } else if (dd == 01) {
 			Session.set("day", "01/11");
-	  } else if (dd == 2) {
+	  } else if (dd == 02) {
 			Session.set("day", "02/11");
 	  } 
 	} else {
@@ -21,15 +21,11 @@ Template.meun.onRendered(function () {
 	}
 });
 
-Template.meun.onDestroyed(function () {
-	Session.set('fromAtividade', 0);
-});
-
-Template.meun.rendered = function () {
-	Meteor.myFunctions.renderMeuN();
+Template.meubife.rendered = function () {
+	Meteor.myFunctions.renderMeuBife();
 }
 
-Template.meun.events({
+Template.meubife.events({
 	'click .collection-item a.secondary-content': function (event, template) {
 		event.preventDefault();
 
