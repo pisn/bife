@@ -8,6 +8,23 @@ Template.gerenciarAtividadesEditar.rendered = function () {
 };
 
 Template.gerenciarAtividadesEditar.events({
+    'click .remove' : function(e){
+        var activityId = Session.get('atividadeId');
+
+        
+            titulo = $(e.target).find('#atividade_titulo').val();
+            tipo = $(e.target).find('#atividade_tipo').val();
+                
+            console.log("titulo: " + titulo);
+
+        Meteor.call('atividadesRemove',titulo, tipo, activityId, function(error,result) {
+            if(error)
+                console.log(error.reason);
+            Router.go('gerenciar_atividades');
+        });
+
+    },
+
     'submit form': function (e) {
         e.preventDefault();
 
