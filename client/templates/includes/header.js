@@ -57,6 +57,10 @@ Template.header.helpers ({
 	},
 	'searchForm': function () {
 		return Session.get('showSearch');
+	},
+
+	'facul': function() {
+		return Meteor.user().profile.faculdade;
 	}
 });
 

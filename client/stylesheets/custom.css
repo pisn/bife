@@ -10,6 +10,8 @@ h6 {
 	color: #666;
 }
 
+
+
 .select-wrapper {
 	z-index: 10;
 }
@@ -53,7 +55,51 @@ p {color: #999;}
 nav {
 	box-shadow: none;
 	background-color: #00bcd4;
+	/*Altera back do title*/
 }
+
+.ime {
+	background-color: #ff0000;
+	/*Altera back do title*/
+}
+
+.fau {
+	background-color: #66ff66;
+}
+
+.eca {
+	background-color: #990099;
+	/*Altera back do title*/
+}
+
+.icbio {
+	background-color: #00cc00;
+}
+
+.geo {
+	background-color: #ffff00;
+}
+
+.fflch {
+	background-color: #ff6600;
+}
+
+.vet {
+	background-color: #800000;
+}
+
+.psico {
+	background-color: #ffcc00;
+}
+
+.quimica {
+	background-color: #0000ff;
+}
+
+.fisica {
+	background-color: #000066;
+}
+
 
 div.navbar-fixed {
 	height: 56px;
@@ -151,12 +197,13 @@ nav#datas-navbar ul#nav-mobile {
 
 nav#datas-navbar ul#nav-mobile, nav#datas-navbar ul#nav-mobile li {
 	height: 56px;
-	background-color: #00bcd4;
+	/*Altera back das datas*/
 }
 
 nav#datas-navbar ul#nav-mobile li.active, nav#datas-navbar ul#nav-mobile li:hover {
 	box-sizing: border-box;
 	border-bottom: 3px solid #00E7EB;
+	/*Altera sob as datas */
 	opacity: 1;
 }
 
@@ -339,7 +386,7 @@ div.card {
 
 body.loginBackground {
   background: url('login_screen_new2.jpg') no-repeat top center;
-background-size: cover;
+ackground-size: cover;
   background-attachment: fixed;
 }
 

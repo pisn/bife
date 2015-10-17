@@ -4,6 +4,7 @@ Template.registrar.events({
         var emailVar = template.find('#login_email').value;
         var passwordVar = template.find('#login_senha').value;
         var passwordConfirm = template.find('#login_confirmar_senha').value;
+        var facul = template.find('#facul').value;
 
         if (passwordVar !== passwordConfirm) {
 
@@ -20,7 +21,8 @@ Template.registrar.events({
                     activities: [],
                     notifications: [],
                     notificacoesEvento: true,
-                    notificacoesMeuN: true
+                    notificacoesMeuN: true,
+                    faculdade: facul
                 }
             }, function(err){
 
@@ -60,6 +62,7 @@ Template.registrar.events({
 });
 
 Template.registrar.rendered = function(){
+    $('select').material_select();
     $('body').addClass('loginBackground');
 }
 

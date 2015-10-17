@@ -8,6 +8,10 @@ Template.atividadeSingle.helpers({
         } else {
             return "not-going cyan";
         }
+    },
+
+     'facul': function() {
+        return Meteor.user().profile.faculdade;
     }
 });
 

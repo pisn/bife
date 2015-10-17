@@ -1,3 +1,10 @@
+Template.atividades_nav.helpers({
+    
+    'facul': function() {
+        return Meteor.user().profile.faculdade;
+    }
+});
+
 Template.atividades_nav.events({
     'click a.atividade_nav_day': function (e) {
         e.preventDefault();
