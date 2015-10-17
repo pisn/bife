@@ -1,0 +1,4 @@
+db.users.find({"emails.address": { $in : ["pedro.isn1@gmail.com"]}})
+
+
+db.users.update({"emails.address": { $in : ["pedro.isn1@gmail.com"]}}, { $set : { "profile.isAdmin" : true }})

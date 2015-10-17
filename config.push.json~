@@ -1,4 +1,10 @@
 {
+  "apn": {
+    "passphrase": "",
+    "key": "",
+    "cert": "",
+    "gateway": ""
+  },
   "gcm": {
     "apiKey": "AIzaSyC-P2HscAPKL4dzI5EDBSTdmbCF5UhoUEU",
     "projectNumber": 999956379362  

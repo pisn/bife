@@ -1,0 +1,22 @@
+// This section sets up some basic app metadata,
+// the entire section is optional.
+App.info({
+  id: '',
+  name: '',
+  description: '',
+  author: '',
+  email: '',
+  website: ''
+});
+ 
+// Set up resources such as icons and launch screens.
+App.icons({
+  'iphone_2x': 'icons/120.png',
+  'iphone_3x': 'icons/180.png',
+  'ipad': 'icons/76.png',
+  'ipad_2x': 'icons/72.png',
+  'android_ldpi': 'icons/40.png',
+  'android_mdpi': 'icons/29.png',
+  'android_hdpi': 'icons/80.png',
+  'android_xhdpi': 'icons/100.png',
+});
