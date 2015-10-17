@@ -8,11 +8,24 @@ Template.header.helpers ({
 	'anyUnreadNotifications': function () {
 		// return Notificacoes.find({userId: Meteor.userId(), read: false}).count() > 0;
 		if (Meteor.user().profile.notificacoesEvento && Meteor.user().profile.notificacoesMeuN)  { //quer receber os dois tipos
-			var allNotifications = Notificacoes.find({}).fetch();
-		} else if (Meteor.user().profile.notificacoesEvento && !Meteor.user().profile.notificacoesMeuN) { //quer receber só meu_n
+			var arr_ac=[]; 
+			Atividades.find({"_id": {$in :Meteor.user().profile.activities}}).forEach( function (ac) {
+				arr_ac.push(ac._id);
+			});
+			//notificaçoes evento tem referencia 0
+			arr_ac.push("0");
+			var allNotifications = Notificacoes.find({referencia: {$in: arr_ac}}).fetch();
+		} else if (Meteor.user().profile.notificacoesEvento && !Meteor.user().profile.notificacoesMeuN) { //quer receber só evento
 			var allNotifications = Notificacoes.find({tipo: "evento"}).fetch();
-		} else if (!Meteor.user().profile.notificacoesEvento && Meteor.user().profile.notificacoesMeuN) { //quer receber só evento
-			var allNotifications = Notificacoes.find({tipo: "meu_n"}).fetch();
+		} else if (!Meteor.user().profile.notificacoesEvento && Meteor.user().profile.notificacoesMeuN) { //quer receber só meu_n
+			
+			//primeiro populo array de activities
+			var arr_ac=[]; 
+			Atividades.find({"_id": {$in :Meteor.user().profile.activities}}).forEach( function (ac) {
+				arr_ac.push(ac._id);
+			});
+			//depois array de notificações com activities			
+			var allNotifications = Notificacoes.find({referencia: {$in: arr_ac}}).fetch();
 		}
 		
 		var notReadNotifications = 0;
