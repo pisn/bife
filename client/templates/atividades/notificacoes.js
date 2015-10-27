@@ -7,10 +7,11 @@ Template.notificacoes.helpers({
 			});
 			//notificaçoes evento tem referencia 0
 			arr_ac.push("0");
-			return Notificacoes.find({referencia: {$in: arr_ac}, faculdade: Meteor.user().profile.faculdade},{sort: {submitted: -1}});
+			arr_ac.push("1");
+			return Notificacoes.find({referencia: {$in: arr_ac}, faculdade: {$in: [Meteor.user().profile.faculdade, "Todos os usuários"]}},{sort: {submitted: -1}});
 
 		} else if (Meteor.user().profile.notificacoesEvento && !Meteor.user().profile.notificacoesMeuN) { //quer receber só evento
-			return Notificacoes.find({tipo: 'evento', faculdade: Meteor.user().profile.faculdade},{sort: {submitted: -1}});
+			return Notificacoes.find({tipo: 'evento', faculdade: {$in :[Meteor.user().profile.faculdade,"Todos os usuários"]}},{sort: {submitted: -1}});
 		} else if (!Meteor.user().profile.notificacoesEvento && Meteor.user().profile.notificacoesMeuN) { //quer receber só meu_n
 
 			//primeiro populo array de activities

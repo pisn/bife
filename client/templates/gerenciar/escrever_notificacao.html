@@ -31,6 +31,9 @@
                 <select id="notificacao_referencia">
                     <option value="" disabled selected>Refere-se a alguma atividade?</option>
                     <option value="0">Nenhuma</option>
+                    {{#if currentUser.profile.isMaster}}
+                    <option value="1">Todos os usuários</option>
+                    {{/if}}
                     {{#each listAtividades}}
                     <option value="{{_id}}">{{titulo}} - {{tipo}}</option>
                     {{/each}}

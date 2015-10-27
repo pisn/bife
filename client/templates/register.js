@@ -17,6 +17,7 @@ Template.registrar.events({
                 password: passwordVar,
                 profile: {
                     isAdmin: false,
+                    isMaster: false,
                     lastView: "",
                     activities: [],
                     notifications: [],

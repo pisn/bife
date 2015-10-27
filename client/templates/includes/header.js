@@ -13,10 +13,11 @@ Template.header.helpers ({
 				arr_ac.push(ac._id);
 			});
 			//notificaçoes evento tem referencia 0
-			arr_ac.push("0");
-			var allNotifications = Notificacoes.find({referencia: {$in: arr_ac}, faculdade: Meteor.user().profile.faculdade}).fetch();
+			arr_ac.push("0"); //notficiações de faculdade
+			arr_ac.push("1"); //notificações todos os usuarios
+			var allNotifications = Notificacoes.find({referencia: {$in: arr_ac}, faculdade: {$in :[Meteor.user().profile.faculdade,"Todos os usuários"]}}).fetch();
 		} else if (Meteor.user().profile.notificacoesEvento && !Meteor.user().profile.notificacoesMeuN) { //quer receber só evento
-			var allNotifications = Notificacoes.find({tipo: "evento", faculdade: Meteor.user().profile.faculdade}).fetch();
+			var allNotifications = Notificacoes.find({tipo: "evento", faculdade: {$in :[Meteor.user().profile.faculdade,"Todos os usuários"]}}).fetch();
 		} else if (!Meteor.user().profile.notificacoesEvento && Meteor.user().profile.notificacoesMeuN) { //quer receber só meu_n
 			
 			//primeiro populo array de activities

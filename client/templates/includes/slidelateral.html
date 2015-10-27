@@ -10,7 +10,7 @@
 
         <hr>
 
-        <li><a href="{{pathFor 'mapa'}}">Mapa da Rio Branco</a></li>        
+        
         <!--<li><a href="{{pathFor 'estatica'}}">Informações úteis</a></li>-->
         <li><a href="{{pathFor 'chav'}}">Chaveamentos</a></li>
         {{#if currentUser}}
@@ -18,8 +18,10 @@
         {{/if}}
         <hr>
         {{#if currentUser.profile.isAdmin}}
-            <li><a href="{{pathFor 'gerenciar_atividades'}}">Gerenciar Atividades</a></li>
             <li><a href="{{pathFor 'gerenciar_notificacao'}}">Gerenciar Notificações</a></li>
+        {{/if}}
+        {{#if currentUser.profile.isMaster}}
+        <li><a href="{{pathFor 'gerenciar_atividades'}}">Gerenciar Atividades</a></li>
         {{/if}}
 
         {{#if currentUser}}

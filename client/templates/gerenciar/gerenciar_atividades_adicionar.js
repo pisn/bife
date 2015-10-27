@@ -6,6 +6,12 @@ Template.gerenciarAtividadesAdicionar.rendered = function () {
     });
 };
 
+Template.gerenciarAtividadesAdicionar.helpers({
+    'facul': function() {
+        return Meteor.user().profile.faculdade;
+    }
+});
+
 Template.gerenciarAtividadesAdicionar.events({
     'submit form': function (e) {
         e.preventDefault();
