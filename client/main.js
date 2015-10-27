@@ -1,5 +1,6 @@
 Meteor.subscribe('notificacoes');
 Meteor.subscribe('atividades');
+Meteor.subscribe('allUsers');
 
 Template.registerHelper('formatDate', function(date) {
 	//aqui ele usa moment, que é um package para manipular datas
