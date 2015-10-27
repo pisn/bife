@@ -1,6 +1,10 @@
 Template.escreverNotificacao.helpers({
     'listAtividades': function () {
         return Atividades.find({});
+    },
+
+    'facul': function() {
+        return Meteor.user().profile.faculdade;
     }
 });
 

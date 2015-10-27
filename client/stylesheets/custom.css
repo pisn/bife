@@ -58,6 +58,10 @@ nav {
 	/*Altera back do title*/
 }
 
+.back-manchas {
+	background-color: #00bcd4;
+}
+
 .ime {
 	background-color: #ff0000;
 	/*Altera back do title*/
@@ -386,7 +390,7 @@ div.card {
 
 body.loginBackground {
   background: url('login_screen_new2.jpg') no-repeat top center;
-ackground-size: cover;
+	background-size: cover;
   background-attachment: fixed;
 }
 

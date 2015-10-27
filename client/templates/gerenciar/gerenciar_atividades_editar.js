@@ -7,6 +7,12 @@ Template.gerenciarAtividadesEditar.rendered = function () {
     });
 };
 
+Template.gerenciarAtividadesEditar.helpers({
+    'facul' : function(){
+        return Meteor.user().profile.faculdade;
+    }
+});
+
 Template.gerenciarAtividadesEditar.events({
     'click .remove' : function(e){
         var activityId = Session.get('atividadeId');
